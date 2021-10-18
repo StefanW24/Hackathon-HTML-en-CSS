@@ -1,0 +1,166 @@
+html{ 
+    height:100%;
+    width:100%;
+}
+body{ 
+    min-height:100%;
+    display: grid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 75px 75px 75px auto 90px;
+    grid-template-areas:  
+        "a a a"  
+        "d e f"
+        "h h h"
+        "j k l"
+        "m m m"
+        "q q q";     
+}
+a{
+    text-decoration: none; 
+    color: deepskyblue;
+}
+h2{
+    display: grid;
+    grid-area: m;
+    text-align: center;
+}
+nav a:visited{
+    color: deepskyblue;
+}
+nav a:hover{
+    color:black;
+}
+header{
+    display: grid;
+    grid-area: a;
+    border-top: groove;
+    border-bottom: groove;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    height: 50px;
+    color: black;
+}
+header a{
+    color:black;
+}
+footer{
+    display: grid;
+    grid-area: q;
+    border-top: groove;
+    border-bottom: groove;
+    display: inline;
+    text-align: center;
+    margin-bottom: 25px;
+    height: 75px;
+}
+nav{
+    display: grid;
+    grid-area: e;
+    padding: 5px;
+    color:deepskyblue;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+}
+nav a{
+    margin: 20px;
+}
+.lood{
+    display: grid;
+    grid-area: m;
+    justify-content: center;
+    padding-top: 100px;
+}
+article{
+    display: grid;
+    grid-area: m;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.formulier{
+    grid-area: m;
+    text-align: center;
+    padding-top: 100px;
+}
+.paragraaf{
+    grid-area: m;
+    text-align: center;
+}
+.veld1{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 8px;
+}
+.veld2{
+    padding: 20px;
+}
+.veld3{
+    padding: 20px;
+    padding-right: 40px;
+}
+.tekstveld{
+    padding-top: 20px;
+}
+
+@media (min-width: 800px) {
+
+    body{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 75px 75px 75px auto 75px 90px;
+        grid-template-areas:  
+            "a a a"  
+            "e e e"
+            "g h i"
+            "k k k"
+            "l l l"
+            "q q q";     
+    }
+    h2{
+        display: grid;
+        grid-area: k;
+    } 
+    nav{
+        grid-area: e;
+        font-size: 20px;
+        display: inline;
+        margin: auto;
+    }
+    nav a{
+        margin: 90px;
+    }
+    .lood{
+        display: grid;
+        grid-area: k;
+        display: flex;
+    }
+    .lood img{
+        height: auto;
+        width: 40%;
+    }
+    article{
+        display: grid;
+        grid-area: k;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 80px;
+    }
+
+
+    footer{
+        grid-area: q;
+    }
+    .formulier{
+        grid-area: k;
+        padding-top: 100px;
+    }
+    .paragraaf{
+        grid-area: h;
+        padding-top: 50px;
+    }
+}  
+

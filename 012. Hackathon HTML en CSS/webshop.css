@@ -1,0 +1,173 @@
+html{ 
+    height:100%;
+    width:100%;
+}
+body{ 
+    min-height:100%;
+    display: grid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 75px 75px 75px 1fr 1fr 1fr 1fr 50px 90px;
+    grid-template-areas:  
+        "a a a"  
+        "b c d"
+        "e f g"
+        "h i j"
+        "m m m"
+        "n n n"
+        "o o o"
+        "p p p"
+        ". . ."
+        "t t t";     
+}
+a{
+    text-decoration: none; 
+    color: deepskyblue;
+}
+nav a:visited{
+    color: deepskyblue;
+}
+nav a:hover{
+    color:black;
+}
+header{
+    display: grid;
+    grid-area: a;
+    border-top: groove;
+    border-bottom: groove;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    height: 50px;
+    color: black;
+}
+header a{
+    color:black;
+}
+footer{
+    display: grid;
+    grid-area: t;
+    border-top: groove;
+    border-bottom: groove;
+    display: inline;
+    text-align: center;
+    margin-bottom: 25px;
+    height: 75px;
+}
+nav{
+    display: grid;
+    grid-area: c;
+    padding: 5px;
+    color:deepskyblue;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+}
+nav a{
+    margin: 20px;
+}
+.jigkop{
+    grid-area: m;
+}
+.method{
+    grid-area: n;
+}
+.steenlood{
+    grid-area: o;
+}
+.voerkorf{
+    grid-area: p;
+}
+.winkelwagen1{
+    grid-area: m;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-self: right;
+}
+.winkelwagen2{
+    grid-area: n;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-self: right;
+}
+.winkelwagen3{
+    grid-area: o;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-self: right;
+}
+.winkelwagen4{
+    grid-area: p;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-self: right;
+}
+p{
+    padding-left: 20px;
+}
+@media (min-width: 800px) {
+    body{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 75px 75px 75px 75px auto auto 50px 90px;
+        grid-template-areas:  
+            "a a"  
+            "b b"
+            "e f"
+            "h i"
+            "k l"
+            "n o"
+            ". ."
+            "t t";
+    }
+    nav{
+        grid-area: b;
+        font-size: 20px;
+        display: inline;
+        margin: auto;
+    }
+    nav a{
+        margin: 90px;
+    }
+
+    .jigkop{
+        grid-area: k;
+    }
+    .method{
+        grid-area: l;
+    }
+    .steenlood{
+        grid-area: n;
+    }
+    .voerkorf{
+        grid-area: o;
+    }
+    .winkelwagen1{
+        grid-area: k;
+        display: inline;
+        padding-left: 400px;
+        flex-direction:unset;
+        justify-self: unset;
+    }
+    .winkelwagen2{
+        grid-area: l;
+        display: inline;
+        padding-left: 400px;
+        flex-direction:unset;
+        justify-self: unset;
+    }
+    .winkelwagen3{
+        grid-area: n;
+        display: inline;
+        padding-left: 400px;
+        flex-direction:unset;
+        justify-self: unset;
+    }
+    .winkelwagen4{
+        grid-area: o;
+        display: inline;
+        padding-left: 400px;
+        flex-direction:unset;
+        justify-self: unset;
+    }
+}
